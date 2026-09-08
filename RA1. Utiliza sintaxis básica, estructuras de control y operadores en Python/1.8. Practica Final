@@ -1,0 +1,114 @@
+# 🎮 Práctica Final RA1 - Portal de Seguridad y Arcade Digital (SteamArcade)
+
+## 🎯 Objetivos de Aprendizaje
+
+* Integrar **todos los conceptos** clave del Bloque 1: variables, tipos de datos, captura por teclado (`input()`), conversión de tipos (`casting`), rebanado de cadenas (*slicing*).
+* Dominar operadores aritméticos, relacionales, lógicos y el comportamiento de la **evaluación en cortocircuito**.
+* Aplicar estructuras de decisión avanzadas (`if-elif-else`, `match-case`) y control de flujos mediante bucles (`for`, `while`, `break`, `continue`).
+* Escribir código profesional bajo la guía oficial de estilo **PEP 8**, documentado con comentarios técnicos y un **Docstring multilínea** de cabecera.
+
+---
+
+## 💻 El Reto: Desarrollar "SteamArcade Launcher"
+
+Vas a diseñar y codificar el motor de un **portal de lanzamientos de videojuegos retro (SteamArcade)** que simula el flujo de autenticación, control de seguridad en contraseñas y un menú de entretenimiento interactivo con créditos limitados.
+
+El programa debe estructurarse obligatoriamente mediante un bucle de ejecución continua y ofrecer las siguientes características:
+
+### 📋 Requisitos del Programa
+
+#### 1. Menú Principal Activo (`while` y `match-case`)
+
+El portal debe permanecer en funcionamiento constante mostrando el siguiente menú interactivo en consola:
+
+```text
+=== STEAMARCADE LAUNCHER ===
+1. Registrar Cuenta de Usuario
+2. Iniciar Sesión
+3. Entrar al Salón Arcade (Requiere login)
+4. Salir del Portal
+
+```
+
+El usuario elegirá una opción numérica. Debes usar `match-case` para enrutar su elección. Si introduce un valor no válido, se mostrará una advertencia limpia y el menú volverá a aparecer.
+
+---
+
+#### 2. Módulo de Registro Seguro (Validación de Cadenas y Bucles)
+
+Cuando el usuario seleccione la opción `1`, el programa le solicitará crear un identificador y una contraseña con reglas estrictas de seguridad de la industria:
+
+* **Validación del Identificador (Email de usuario):**
+* Debe contener al menos una arroba `@`.
+* Debe terminar obligatoriamente con la extensión `.com` o `.es`.
+* No puede tener espacios en blanco en su interior.
+* *Lógica del bucle:* Si el identificador introducido no cumple con estos requisitos, el programa debe indicar con precisión el fallo y **volver a solicitarlo** repetidamente usando un bucle `while` hasta que sea válido.
+
+
+* **Validación de la Contraseña:**
+* Debe tener una longitud mínima de **8 caracteres**.
+* Debe incluir al menos una **letra mayúscula**.
+* Debe incluir al menos un **número**.
+* Debe incluir al menos un **carácter especial** de esta lista: `!`, `@`, `#`, `$`, `%`, `*`, `?`.
+* *Lógica del bucle:* Al igual que el identificador, si la contraseña no cumple con todas las directrices, el programa mostrará un mensaje descriptivo y **volverá a pedirla** en bucle hasta que sea segura.
+
+
+* Una vez validados, se guardarán los datos en las variables correspondientes y se mostrará el mensaje: `Registro completado con éxito. ✅`.
+
+---
+
+#### 3. Módulo de Inicio de Sesión (Control de Intentos y Estados)
+
+Cuando el usuario seleccione la opción `2`:
+
+* Si no se ha registrado ninguna cuenta previamente, el sistema mostrará el mensaje `Error: No hay cuentas registradas en este terminal. Registra un usuario primero.` y volverá al menú principal.
+* Si ya hay una cuenta registrada, el programa solicitará las credenciales.
+* El usuario dispondrá de un **máximo de 3 intentos** para introducir correctamente la contraseña:
+* Si introduce el usuario o contraseña de forma errónea, el sistema informará del fallo e incrementará el contador (ej: `Intento 1/3 fallido`).
+* Si agota los 3 intentos sin éxito, el sistema mostrará el aviso `Acceso bloqueado temporalmente por seguridad. 🚫` y retornará de forma automática al Menú Principal.
+* Si el usuario y la contraseña coinciden, se cambiará un estado de autenticación a `True` y se mostrará un mensaje de bienvenida personalizado: `Acceso concedido. ¡Bienvenido de nuevo, [usuario]! 🔓`.
+
+
+
+---
+
+#### 4. Módulo del Salón Arcade (Aritmética y Control de Bucles)
+
+Cuando el usuario seleccione la opción `3`:
+
+* **Control de Acceso:** El programa comprobará el estado de autenticación. Si el usuario no ha iniciado sesión con éxito previamente, el programa mostrará el aviso `Acceso denegado. Debes iniciar sesión primero. ⛔` y lo devolverá al Menú Principal.
+* **El juego "Gacha Clicker":** Si el usuario está autenticado, entrará al simulador Arcade.
+* Al entrar, recibirá un saldo inicial de **100 créditos**.
+* El Arcade se ejecutará en su propio bucle interno con el siguiente menú:
+```text
+--- SALÓN ARCADE (Créditos: X) ---
+1. Lanzar tirada Gacha (Coste: 30 créditos)
+2. Recargar créditos (Añade 50 créditos)
+3. Volver al menú del Portal
+
+```
+
+
+* **Lógica de Tirada:** Cada tirada gacha cuesta **30 créditos**.
+* Si tiene créditos suficientes, se descuenta el coste y se genera un número entero de la suerte simulado (puedes calcularlo usando operaciones lógicas o aritméticas sencillas, por ejemplo, pidiendo al usuario un número de semilla por teclado o dividiendo un valor introducido por él y usando el operador de residuo `%`).
+* Si el residuo de la operación es `0`, el usuario gana el gran premio: `¡Felicidades! Has obtenido una SKIN LEGENDARIA! ⭐💎`.
+* Si el residuo es distinto de `0`, el premio es común: `Has obtenido una recompensa común (Poción de salud). 🧪`.
+* Si los créditos del usuario caen por debajo de 30, el programa le advertirá: `Saldo insuficiente para jugar. ¡Recarga créditos para continuar! ⚠️`.
+
+
+
+
+
+---
+
+## 🛠️ Requisitos de Código y Buenas Prácticas (PEP 8)
+
+* **Indentación:** Debe respetarse la indentación estricta de 4 espacios en cada bloque condicional o de bucle.
+* **Nomenclatura:** Las variables deben declararse en minúsculas y usando `snake_case` (ej. `usuario_registrado`, `intentos_fallidos`). Las constantes que definan límites (como el número de intentos o el coste de la tirada) se declararán en mayúsculas (ej. `MAX_INTENTOS = 3`).
+* **Documentación:** El script debe iniciarse con un **Docstring de cabecera** detallado con comillas triples describiendo el propósito del programa, su autor y fecha. Se deben añadir comentarios cortos `#` que guíen los bloques lógicos de control.
+
+---
+
+## 📥 Formato de Entrega
+
+El archivo debe entregarse en un único script de Python con el nombre **`b1_10_steam_arcade.py`**, preparado para ser depurado y ejecutado directamente en IntelliJ IDEA.
