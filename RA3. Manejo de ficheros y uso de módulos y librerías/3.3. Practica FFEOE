@@ -1,0 +1,117 @@
+# 📋 Actividad Evaluable: Proyecto Libre con Librería Externa en Python (Edición No Presencial)
+
+## 📌 Descripción General
+
+Esta actividad final del **Bloque 3** está diseñada para que apliques de forma práctica los conocimientos adquiridos sobre **estructuras de datos, modularización, manejo de ficheros, excepciones y uso de librerías** en un entorno real.
+
+Dado que te encuentras realizando tu periodo de prácticas formativas en la empresa de acogida y no habrá clases presenciales en el centro, el formato de defensa de este proyecto será **100% no presencial**. En lugar de una exposición oral clásica, diseñarás, programarás y documentarás tu aplicación de forma autónoma, y entregarás una **videoexposición grabada (screencast)** con la demostración de tu desarrollo y la explicación técnica de tu código.
+
+Para este proyecto, tienes la total libertad de **diseñar y desarrollar una aplicación propia** utilizando una **librería externa de libre elección** que sea de tu interés personal o profesional (relacionada o no con tus tareas en la empresa), instalada mediante el gestor de paquetes `pip`.
+
+---
+
+## 🎯 Objetivos de Aprendizaje
+
+* **Especialización:** Investigar, instalar y aplicar de forma real una librería externa de la comunidad de Python.
+* **Integración:** Combinar el uso de librerías de terceros con los módulos estándar de Python para resolver un problema real.
+* **Persistencia:** Implementar el almacenamiento, consulta, edición o eliminación de información a través de ficheros locales (CRUD).
+* **Modularidad y Arquitectura:** Organizar un proyecto de software profesional utilizando carpetas, paquetes (`__init__.py`) y módulos personalizados para separar responsabilidades.
+* **Robustez:** Implementar un control de excepciones profesional que evite que la aplicación falle ante entradas inesperadas o problemas de red.
+* **Comunicación Digital:** Sintetizar la arquitectura de tu software, explicar su código de forma fluida y realizar una demostración práctica convincente a través de una grabación técnica en vídeo.
+
+---
+
+## 📚 1. Elección de la Librería Externa
+
+Deberás seleccionar **una librería externa de Python** que sea relevante para el proyecto que deseas construir. La librería puede pertenecer a cualquiera de los siguientes ámbitos tecnológicos (u otros de tu interés):
+
+* **Videojuegos y Gráficos:** (Ej: *Pygame, Arcade, Ursina, Turtle*).
+* **Inteligencia Artificial y Machine Learning:** (Ej: *Scikit-learn, TensorFlow, Keras, OpenCV*).
+* **Análisis y Visualización de Datos:** (Ej: *Pandas, Matplotlib, Seaborn, Plotly*).
+* **Desarrollo Web o APIs:** (Ej: *FastAPI, Flask, Django, requests*).
+* **Automatización, Scraping o Bots:** (Ej: *BeautifulSoup, Selenium, Scrapy, discord.py*).
+* **Interfaces Gráficas (GUI):** (Ej: *Tkinter, CustomTkinter, PySide/PyQt*).
+
+### ⚠️ Requisitos de la Librería:
+
+1. Debe instalarse obligatoriamente mediante el comando de terminal `pip install`.
+2. Debe tener un rol protagonista y justificado en la funcionalidad central de tu aplicación (no se permite importar una librería solo para usar una función secundaria o cosmética).
+
+---
+
+## 🛠️ 2. Requisitos Técnicos del Desarrollo
+
+La aplicación que entregues para tu evaluación debe cumplir estrictamente con los siguientes estándares de calidad industrial:
+
+### A. Funcionalidad e Interacción
+
+* **Interactiva:** El programa debe permitir al usuario interactuar en tiempo real (introducción de datos por consola, menús interactivos, clics en interfaz gráfica, selección de opciones o visualización dinámica de resultados).
+* **Tratamiento de Ficheros (CRUD):** El programa debe realizar, de manera justificada, operaciones de persistencia en disco. Al menos debe permitir **Crear (Create), Leer (Read), Actualizar (Update) o Eliminar (Delete)** registros en un archivo local (de texto plano, CSV, JSON, logs, etc.).
+
+### B. Uso de Módulos Estándar
+
+* El proyecto debe integrar de forma justificada **al menos un módulo estándar de Python** (como `os` para manipulación de rutas y directorios, `sys` para control de ejecución, `math` para operaciones de alta precisión, `random` para simulaciones, o `datetime` para registro de marcas de tiempo).
+
+### C. Arquitectura y Organización del Proyecto
+
+El código de tu aplicación **no puede estar concentrado en un único archivo**. Debes seguir una estructura modular profesional:
+
+* **Punto de Entrada:** Un script principal (`main.py`) que sirva exclusivamente para inicializar la aplicación.
+* **Módulos Personalizados:** Separar la lógica de negocio, el procesamiento de datos y la interfaz en archivos independientes.
+* **Paquetes Estructurados:** Organizar los módulos en subcarpetas lógicas que actúen como paquetes, incluyendo su respectivo archivo de inicialización `__init__.py` para estructurar imports de manera natural y predecible.
+* **Nomenclatura Limpia:** Variables, funciones y módulos nombrados bajo las directrices estéticas de la guía de estilo **PEP 8**.
+
+### D. Robustez y Control de Errores (Excepciones)
+
+La aplicación debe ser tolerante a fallos:
+
+* Implementar bloques `try-except` para gestionar de forma elegante entradas incorrectas del usuario, fallos de conexión (en caso de consumir APIs), o excepciones de disco al interactuar con ficheros (`FileNotFoundError`, `PermissionError`).
+* En ningún caso la ejecución debe abortarse abruptamente con un traceback o error del intérprete en consola.
+
+---
+
+## 📄 3. Documentación Obligatoria (README.md)
+
+El proyecto debe acompañarse de un archivo de documentación en formato Markdown llamado **`README.md`** que incluya:
+
+1. **Descripción del proyecto:** Qué problema resuelve tu aplicación y por qué es útil.
+2. **Librería externa utilizada:** Justificación de su elección y qué aporta al proyecto.
+3. **Instrucciones de Instalación:** Los comandos necesarios para configurar el entorno de ejecución (ej: creación de entorno virtual e instalación de dependencias con `pip`).
+4. **Instrucciones de Uso:** Cómo lanzar la aplicación y una guía rápida de las opciones que ofrece.
+5. **Estructura de Carpetas:** Un esquema del árbol de directorios de tu proyecto.
+
+---
+
+## 📹 4. Guía para la Videoexposición y Demo Grabada (Screencast)
+
+Al no realizarse una defensa presencial, **deberás grabar un vídeo explicativo** utilizando herramientas gratuitas de captura de pantalla (como OBS Studio, ShareX, la barra de juegos de Windows, QuickTime en Mac, o plataformas online como Loom o Screencast-O-Matic).
+
+### ⏱️ Parámetros del Vídeo:
+
+* **Duración:** Entre **8 y 12 minutos** máximo.
+* **Formato de Entrega:** Archivo de vídeo `.mp4` incluido en la entrega, o un enlace directo (Google Drive, OneDrive o YouTube en modo "Oculto/Unlisted") apuntado claramente en el archivo de entrega o en el `README.md`.
+* **Requisitos Técnicos de Grabación:**
+* Captura de pantalla a resolución legible (mínimo 720p).
+* Audio de voz claro y sin excesivo ruido de fondo (la explicación debe ser narrada por ti de forma fluida).
+* Es altamente recomendable (aunque opcional) que captures tu webcam en una esquina de la pantalla para dar mayor profesionalidad y verificar la autoría.
+
+
+
+### 🧩 Estructura Obligatoria de la Videoexposición:
+
+1. **Introducción y Elección (1.5 min):** Muestra el software e indica qué librería externa has seleccionado, justificando su utilidad y detallando el objetivo del programa.
+2. **Estructura y Arquitectura en el IDE (3 min):** Abre tu IntelliJ IDEA. Muestra el árbol de carpetas de tu proyecto. Explica cómo has dividido los archivos, dónde están ubicados los paquetes, para qué sirve el archivo `__init__.py` y cómo se estructuran las importaciones lógicas.
+3. **Paseo por el Código y Ficheros (2.5 min):** Muestra los bloques de código donde abres, lees o escribes tus ficheros usando `with open(...)` e indica cómo estructuraste el control de excepciones con `try-except`.
+4. **Demostración Práctica Funcional (Demos - 3 min):** Ejecuta la aplicación en tiempo real en la grabación. Haz uso de todas las opciones del menú, introduce datos incorrectos para demostrar cómo el programa captura los errores sin romperse, y muestra en directo cómo cambian o se añaden los datos físicamente en el fichero local de disco dentro del IDE.
+
+---
+
+## 📦 Entregables y Formato de Envío
+
+Debes subir a la plataforma virtual de aprendizaje un único archivo comprimido con la siguiente estructura:
+
+* **Nombre del archivo:** `ra3_actFFEOE.zip`
+* **Contenido indispensable:**
+1. Carpeta raíz de tu proyecto con todo el código fuente ejecutable (`main.py`, paquetes, módulos y ficheros de almacenamiento).
+2. Archivo `README.md` documentado.
+3. **El vídeo explicativo** (archivo `.mp4`) o, en su defecto, un archivo de texto llamado `video_enlace.txt` (o una sección destacada en tu `README.md`) con la dirección URL directa para visualizar el vídeo online.
