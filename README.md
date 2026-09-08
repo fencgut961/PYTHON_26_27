@@ -46,6 +46,6 @@ Este repositorio reúne la estructura de contenidos teóricos y las prácticas a
 | [**3.1. Persistencia de Ficheros**](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.1.%20Conceptos.md) | — |
 | [**3.2. Módulos y Librerías Externas**](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.2.%20Conceptos.md) | — |
 | [**3.3. Módulos Propios y Paquetes**](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.3.%20Conceptos.md) | — |
-| [**3.3. Practica Final RA3 (FFEOE)**](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.3.%20Practica%20FFEOE) | [3.3. Practica FFEOE](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.3.%20Practica%20FFEOE) |
+| [**3.3. Practica Final RA3**](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.3.%20Practica%20FFEOE) | [3.3. Practica FFEOE](./RA3.%20Manejo%20de%20ficheros%20y%20uso%20de%20m%C3%B3dulos%20y%20librer%C3%ADas/3.3.%20Practica%20FFEOE) |
 
 ```
