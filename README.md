@@ -1,1 +1,121 @@
 # PYTHON_26_27
+
+---
+
+# 🔹 Primeros pasos con Python e IntelliJ
+
+## 🎯 Objetivos de aprendizaje
+
+* Conocer qué es Python y por qué es tan popular.
+* Instalar y configurar el entorno de desarrollo (Python + IntelliJ IDEA).
+* Ejecutar el primer programa en Python.
+* Familiarizarse con la consola y la función `print()`.
+
+---
+
+## 📚 Introducción a Python
+
+Python es un **lenguaje de programación de alto nivel**, creado por **Guido van Rossum** en 1991. Su diseño se basa en la simplicidad y la legibilidad, lo que lo convierte en uno de los lenguajes más usados a nivel mundial.
+
+Algunas características que explican su popularidad:
+
+* **Sintaxis clara y concisa**: se parece mucho al lenguaje natural, reduciendo la curva de aprendizaje.
+* **Multiplataforma**: funciona en Windows, macOS y Linux.
+* **Gran comunidad**: existen miles de tutoriales, foros y librerías que facilitan el aprendizaje y desarrollo.
+* **Ecosistema amplio de librerías**: incluye herramientas para web, ciencia de datos, inteligencia artificial, gráficos, entre otros.
+
+Se usa en muchos campos:
+* Desarrollo web (frameworks como Django o Flask)
+* Ciencia de datos y análisis estadístico (pandas, NumPy, Matplotlib)
+* Inteligencia artificial y machine learning (TensorFlow, PyTorch, Scikit-learn)
+* Automatización de tareas y scripts (procesos repetitivos, gestión de archivos)
+* Programación de sistemas y herramientas de administración
+
+👉 **Ventaja clave**: Python es un lenguaje interpretado, lo que significa que no necesitas compilar el código para ejecutarlo. Esto agiliza las pruebas y la experimentación.
+
+---
+
+## ⚙️ Configuración del entorno de desarrollo
+
+Para trabajar cómodamente con Python, necesitamos un entorno donde escribir, ejecutar y depurar el código. En este curso usaremos **IntelliJ IDEA Community Edition** con el plugin de Python.
+
+1. **Instalar Python**
+
+   * Descárgalo desde [python.org](https://www.python.org).
+   * Durante la instalación, activa la casilla **"Add Python to PATH"** para poder ejecutar Python desde cualquier consola.
+
+2. **Instalar IntelliJ IDEA (Community Edition)**
+
+   * Descárgalo desde [jetbrains.com](https://www.jetbrains.com/idea/).
+   * Una vez instalado, añade el **plugin de Python**:
+
+     * Menú: `File > Settings > Plugins`.
+     * Busca *Python* y haz clic en **Install**.
+
+3. **Crear un nuevo proyecto Python en IntelliJ**
+
+   * Menú: `File > New Project > Python`.
+   * Selecciona la opción **"New Virtual Environment (venv)"** para crear un entorno aislado.
+
+     * Esto es importante porque cada proyecto puede tener librerías distintas sin afectar al resto del sistema.
+
+💡 **Tip**: Aunque existen otros editores muy usados como **PyCharm** (también de JetBrains) o **VS Code**, aprender a usar IntelliJ con Python te dará una base sólida para manejar diferentes entornos de desarrollo.
+
+---
+
+## 💻 Tu primer programa: Hola, mundo
+
+En la programación, el primer paso siempre es mostrar un mensaje en pantalla, lo que nos asegura que el entorno está correctamente configurado.
+
+1. Crea un archivo llamado `main.py`.
+2. Escribe este código:
+
+```python
+print("Hola, mundo! Bienvenido a Python.")
+```
+
+3. Haz clic derecho sobre el archivo y selecciona **Run 'main'**.
+4. El resultado aparece en la consola de IntelliJ:
+
+```
+Hola, mundo! Bienvenido a Python.
+```
+
+👉 **Nota**: la función `print()` se usa para mostrar información al usuario. Es una de las funciones más básicas y fundamentales en Python.
+
+---
+
+## 📝 Ejercicio guiado
+
+Vamos a hacer el programa un poco más interactivo. Python tiene la función `input()` que permite **leer información desde el teclado**.
+
+```python
+nombre = input("¿Cómo te llamas? ")
+print(f"Hola, {nombre}! Encantado de conocerte.")
+```
+
+🔍 Explicación:
+
+* `input("mensaje")`: muestra un mensaje y espera a que el usuario escriba algo.
+* La respuesta se guarda en la variable `nombre`.
+* La sintaxis `f"Hola, {nombre}"` se llama **f-string**, y permite insertar valores de variables dentro de un texto.
+
+📌 Prueba: escribe tu nombre y verifica que el programa responde de forma personalizada.
+
+---
+
+## 📝 Actividad **
+
+Crea un script que:
+
+1. Pida al usuario su **nombre** y su **edad**.
+2. Muestre un mensaje como:
+
+```
+Hola Ana, tienes 20 años. Bienvenida a Python 🚀
+```
+
+
+👉 Aquí ya estamos trabajando con **múltiples variables** y mostrando cómo Python permite crear programas dinámicos y adaptados al usuario.
+
+---
