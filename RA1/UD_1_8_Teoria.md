@@ -1,0 +1,75 @@
+# Unidad 1.8: Depuración de Código en el Entorno de Desarrollo (Teoría)
+
+## 🎯 Objetivos de aprendizaje
+* Comprender qué es la depuración (*debugging*) y por qué es una habilidad crítica.
+* Aprender a identificar la diferencia entre errores de sintaxis y errores lógicos.
+* Dominar el uso de puntos de interrupción (*breakpoints*) en IntelliJ IDEA.
+* Inspeccionar variables y controlar el flujo de ejecución paso a paso (*Step Over*, *Step Into*).
+
+---
+
+## 🛠️ ¿Qué es la depuración (*debugging*)?
+En programación, escribir código que funcione a la primera es extremadamente raro. Lo habitual es que contenga errores (conocidos históricamente como *bugs*). La **depuración** es el proceso sistemático de localizar, analizar y corregir estos fallos.
+
+Existen dos grandes familias de errores que te encontrarás constantemente:
+
+### 1. Errores de sintaxis
+Son fallos en las "reglas de escritura" del lenguaje. El intérprete de Python los detecta antes de ejecutar el programa y detiene el proceso de inmediato.
+*   **Ejemplos:** Olvidar los dos puntos `:` al final de un `if` o un `while`, dejar un paréntesis abierto, o indentar de forma incorrecta.
+*   **Solución:** Son fáciles de solucionar porque el propio entorno de desarrollo (IntelliJ) los subraya en rojo y nos indica la línea exacta del fallo.
+
+### 2. Errores lógicos
+Son los más peligrosos y difíciles de detectar. El programa **se ejecuta sin lanzar ningún error ni detenerse**, pero produce un resultado incorrecto o se comporta de forma inesperada.
+*   **Ejemplos:** Calcular mal la media de unas notas por un problema de prioridad de operadores, o crear un bucle que nunca termina (bucle infinito).
+*   **Solución:** No hay alertas del sistema. Aquí es donde el uso del **depurador (debugger)** se vuelve imprescindible.
+
+---
+
+## 🔴 Breakpoints (Puntos de interrupción)
+Un **breakpoint** es una marca que le ponemos a una línea de código específica. Le indica al intérprete: *"Ejecuta el programa normalmente, pero cuando llegues a esta línea, congela la ejecución y espérame"*.
+
+### Cómo usar Breakpoints en IntelliJ:
+1.  **Colocar el breakpoint:** Haz clic en el espacio gris que hay a la izquierda del número de la línea donde quieras detener el flujo. Aparecerá un círculo rojo sólido.
+2.  **Iniciar la depuración:** En lugar de pulsar el botón verde de ejecución normal (*Run*), haz clic en el icono del **escarabajo azul (Debug)** ubicado en la esquina superior derecha (o haz clic derecho sobre el archivo y selecciona `Debug 'nombre_archivo'`).
+3.  **La pausa mágica:** El programa correrá y se detendrá justo en la línea con el círculo rojo (la línea se iluminará en azul o amarillo). Esa línea **aún no se ha ejecutado**; el programa está esperando tus órdenes.
+
+---
+
+## 🔍 Panel de Inspección y Control de Flujo
+Cuando el programa se pausa, se abre la pestaña **Debug** en la parte inferior de IntelliJ. Esta ventana tiene dos superpoderes:
+
+### 1. Inspección de variables (Variables Panel)
+Te permite ver una "fotografía" del montón de memoria (*heap*) en ese instante preciso. Verás el nombre de todas las variables creadas hasta el momento y **su valor actual en tiempo real**. Ya no necesitas llenar tu código de `print()` temporales para saber qué está pasando dentro.
+
+### 2. Control de ejecución paso a paso
+Tienes varios botones para hacer avanzar el programa de manera controlada:
+
+*   **Step Over (F8) ↷:** Ejecuta la línea de código actual y se detiene en la siguiente línea del mismo archivo. Es el botón que usarás el 90% del tiempo para avanzar línea a línea.
+*   **Step Into (F7) ↴:** Si la línea actual contiene una llamada a una función (u otra parte del código externa), este botón "se mete" dentro de esa función para que veas cómo trabaja por dentro.
+*   **Step Out (Shift+F8) ↱:** Si te has metido dentro de una función con *Step Into* y ya has visto suficiente, este botón ejecuta el resto de la función del tirón y te devuelve al flujo principal.
+*   **Resume Program (F9) ▷:** Quita la pausa y continúa la ejecución normal del programa hasta que encuentre el siguiente breakpoint (si lo hay) o finalice el script.
+
+---
+
+## 📐 Un caso clásico de error lógico
+Analiza el siguiente fragmento que busca calcular el precio final de una suscripción de streaming aplicando un descuento de bienvenida de 3€:
+
+```python
+precio_base = 15.99
+descuento = 3.00
+impuesto_porcentaje = 0.21  # 21% de IVA
+
+# Queremos aplicar el descuento al precio base y luego sumar el IVA
+precio_final = precio_base - descuento * (1 + impuesto_porcentaje)
+print(f"Total a pagar: {precio_final}")
+```
+
+Si ejecutas esto, el resultado será `12.36`, pero el cálculo real esperado es `15.75` (es decir: `(15.99 - 3.00) * 1.21`). 
+Python ha multiplicado primero el descuento por el impuesto debido a la **precedencia de operadores** antes de hacer la resta. 
+
+Al depurar paso a paso e inspeccionar la variable `precio_final`, verás inmediatamente que el resultado no cuadra, lo que te guiará a agrupar con paréntesis la operación prioritaria:
+
+```python
+# Solución correcta agrupando la resta primero
+precio_final = (precio_base - descuento) * (1 + impuesto_porcentaje)
+```
