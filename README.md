@@ -16,7 +16,7 @@ Este repositorio reúne la estructura de contenidos teóricos y las prácticas a
 | [**1.5. Bucles**](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.5.%20Conceptos.md) | [1.5. Practica](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.5.%20Practica.md) |
 | [**1.6. Buenas Prácticas (Estilo, Indentación y Documentación)**](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.6.%20Conceptos.md) | [1.6. Practica](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.6.%20Practica.md) |
 | [**1.7. Control de Flujo**](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.7.%20Conceptos.md) | [1.7. Practica](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.7.%20Practica.md) |
-| [**1.8. Practica Final RA1**](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.8.%20Practica%20Final) | [1.8. Practica Final](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.8.%20Practica%20Final) |
+| [**1.8. Practica Final RA1**](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.8.%20Practica%20Final) | [1.8. Practica Final](./RA1.%20Utiliza%20sintaxis%20b%C3%A1sica,%20estructuras%20de%20control%20y%20operadores%20en%20Python/1.8.%20Practica%20Final.md) |
 
 ---
 
