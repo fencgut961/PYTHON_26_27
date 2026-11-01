@@ -1,0 +1,6 @@
+::RA1_14_Encadenamiento de comparaciones:: ¿Qué característica sintáctica válida admite Python al evaluar si una variable 'edad' está entre 18 y 65 inclusive? {
+    =18 <= edad <\= 65
+    ~%-33.33333%18 <\= edad && edad <\= 65
+    ~%-33.33333%edad BETWEEN 18 AND 65
+    ~%-33.33333%(18 <\= edad) & (edad <\= 65)
+}
