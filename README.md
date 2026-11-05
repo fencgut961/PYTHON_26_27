@@ -35,7 +35,7 @@ Este repositorio reúne la estructura de contenidos teóricos y las prácticas a
 | [**2.9. Funciones Lambda**](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.9.%20Conceptos.md) | [2.9. Practica](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.9.%20Practica.md) |
 | [**2.10. Manejo de Excepciones**](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.10.%20Conceptos.md) | [2.10. Practica](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.10.%20Practica.md) |
 | [**2.11. Recursividad e Iteradores**](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.11.%20Conceptos.md) | [2.11. Practica](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.11.%20Practica.md) |
-| [**2.12. Practica Final RA2**](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.12.%20Practica%20Final) | [2.12. Practica Final](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.12.%20Practica%20Final) |
+| [**—**](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.12.%20Practica%20Final) | [2.12. Practica Final](./RA2.%20Funciones,%20estructuras%20de%20datos%20y%20manejo%20de%20Colecciones/2.12.%20Practica%20Final) |
 
 ---
 
